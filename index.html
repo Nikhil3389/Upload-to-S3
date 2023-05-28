@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <title>Upload File</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+    <h1 class="text-center mb-4" >Upload File to S3</h1>
+    <form id="upload-form" method="POST" action="/upload" enctype="multipart/form-data">
+         <div class="form-group">
+                <label for="image">Select a Word document to upload:</label>
+                <input type="file" class="form-control-file" id="image">
+            </div>
+      <!-- <input type="submit" value="Submit"> -->
+      <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Convert to PDF</button>
+            </div>
+    </form>
+     </div>
+
+    </div>
+  </body>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
