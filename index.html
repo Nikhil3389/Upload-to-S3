@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,4 +23,68 @@
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #03ff70;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .form-group label {
+        font-weight: bold;
+        color: #6c757d;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .btn-primary:hover {
+        background-color: hsl(10, 93%, 49%);
+        border-color: #0062cc;
+      }
+      /* Additional Styles */
+      #outer-box {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        background-color: #acd49b;
+        padding: 50px;
+        margin: auto;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="outer-box">
+      <div class="container">
+        <h1 class="text-center mb-4">Upload to S3-Bucket</h1>
+        <form id="upload-form" method="POST" action="/upload" enctype="multipart/form-data" class="d-flex justify-content-center flex-column">
+          <div class="form-group text-center">
+            <label  for="image">Select a Word document-</label>
+            </div>
+            <div class="form-group text-center">
+            <input type="file" class=" mt-2" id="image" name="image">
+          </div>
+          <div class=" form-group text-center">
+            <!-- <button type="submit" class="btn btn-secondary">Convert to PDF</button> -->
+            <button type="submit" class="btn btn-dark">Convert to PDF</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

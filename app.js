@@ -14,7 +14,7 @@ const awsConfig = {
 
 const S3 = new AWS.S3(awsConfig);
 
-const PORT = 3002;
+const PORT = 3003;
 
 const app = express();
 
@@ -52,7 +52,7 @@ const uploadToS3 = (fileData) => {
     return new Promise((resolve, reject) => {
         const params = {
             Bucket: bucketName,
-            Key: `${Date.now().toString()}.docx`,
+            Key: `${Date.now().toString()}.pdf`,
             Body: fileData,
         };
         S3.upload(params, (err, data) => {
@@ -81,11 +81,17 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   }
 
   res.send(`
- <div>
-  <div id="message"  style="color: red; font-weight: bold;">
-    Image uploaded successfully
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; background-color: black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+
+  <div style="background-color: black; padding: 20px;">
+    <div id="message" style="color: white; font-weight: bold; text-shadow: 1px 1px black; font-size: 24px;">
+      Document uploaded successfully
+    </div>
   </div>
+
 </div>
+
+
 `);
 });
 
